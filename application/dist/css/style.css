@@ -1,0 +1,32 @@
+.nav {
+    height: 200px;
+    background-color: rgb(228, 94, 94);
+}
+
+.team {
+    margin-top: 75px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.card {
+    background-color: rgb(243, 243, 243);
+    margin: 15px;
+    height: 350px;
+    width: 305px;
+}
+
+.header {
+    background-color: rgb(49, 125, 212);
+    padding: 5px 20px;
+}
+
+.table {
+    background-color: white;
+    width: 90%;
+}
+
+.main {
+    margin-top: auto;
+    margin-bottom: auto;
+}
