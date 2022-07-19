@@ -1,9 +1,4 @@
-// WHEN I am prompted for my team members and their information
-// THEN an HTML file is generated that displays a nicely formatted team roster based on user input
-// WHEN I click on an email address in the HTML
 // THEN my default email program opens and populates the TO field of the email with the address
-// WHEN I click on the GitHub username
-// THEN that GitHub profile opens in a new tab
 
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -72,8 +67,7 @@ const outputLocation = path.join(__dirname,'dist','team.html')
 async function teamMembers (){
     const answers = await inquirer.prompt(questions);
 
-    // console.log(role)
-    
+    // push object to array to be generated at a later point
     if(role === 'Manager'){
         employees.push(new Manager(answers.name, answers.id, answers.email, answers.officenumber))
     }
@@ -88,6 +82,7 @@ async function teamMembers (){
 
     role = answers.role;
     
+    // run generatehtml() before writing to new html
     if(answers.role === 'No more members to be added'){
         const html = generateHTML(employees)
         fs.writeFileSync(outputLocation, html, 'utf-8')
@@ -97,5 +92,6 @@ async function teamMembers (){
     
 }
 
+// initialise
 teamMembers();
 

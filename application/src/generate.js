@@ -7,9 +7,9 @@ const templatePath = path.join(__dirname,'template','template.html');
 function generateCards(employee){
     const card = fs.readFileSync(cardPath, 'utf-8')
     let replacedCard = card.replace('{{name}}', employee.getName())
-        .replace('{{role}}',employee.getRole())
-        .replace('{{id}}',employee.getId())
-        .replaceAll('{{email}}',employee.getEmail())
+    .replace('{{role}}',employee.getRole())
+    .replace('{{id}}',employee.getId())
+    .replaceAll('{{email}}',employee.getEmail())
     
     if(employee.getRole() === 'Manager'){
         replacedCard = replacedCard.replace('{{key}}', 'Office Number')
@@ -19,14 +19,14 @@ function generateCards(employee){
     if(employee.getRole() === 'Engineer'){
         replacedCard = replacedCard.replace('{{key}}', 'GitHub')
         .replace('{{icon}}','<i class="fa fa-wrench" aria-hidden="true"></i>')
-        .replace('{{value}}',`<a href = "https://github.com/${employee.getGitHub()}">${employee.getGitHub()}</a>`)
+        .replace('{{value}}',`<a href = "https://github.com/${employee.getGitHub()}" target='_blank'>${employee.getGitHub()}</a>`)
     }
     if(employee.getRole() === 'Intern'){
         replacedCard = replacedCard.replace('{{key}}', 'School')
         .replace('{{icon}}','<i class="fa fa-graduation-cap" aria-hidden="true"></i>')
         .replace('{{value}}',employee.getSchool())
     }
-    
+
     return replacedCard;
 }
 

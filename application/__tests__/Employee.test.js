@@ -1,4 +1,5 @@
 const Employee = require('../lib/Employee');
+// validation for input can be utilised in inquirer
 
 describe('Initialize', () => {
     it('getName() will return name property', () => {
