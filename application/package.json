@@ -1,0 +1,33 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "a command line application to generate template team cards",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flipper5001/team-profile-generator.git"
+  },
+  "keywords": [
+    "team",
+    "generator"
+  ],
+  "author": "Flipper5001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Flipper5001/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/Flipper5001/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "jest": "^28.1.3"
+  }
+}
